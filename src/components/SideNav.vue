@@ -26,37 +26,37 @@ import {
 import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/vue/20/solid'
 import { getCollection } from 'astro:content'
 
-    const allPosts = await getCollection("data");
-    const navigation = allPosts.slice(0, -1).map((post, i) => {
+    // const allPosts = await getCollection("data");
+    // const navigation = allPosts.slice(0, -1).map((post, i) => {
 
-    const title = post.data.title
-    let href = post.data.url
-    if(href === "intro") href=""
-    href = "/" + href
-    // console.log({href})
-    return {
-      name: title,
-      href: href,
-      icon: null,
-      current: false
-    }
+    // const title = post.data.title
+    // let href = post.data.url
+    // if(href === "intro") href=""
+    // href = "/" + href
+    // // console.log({href})
+    // return {
+    //   name: title,
+    //   href: href,
+    //   icon: null,
+    //   current: false
+    // }
 
-    });
+    // });
 
-// const navigation = [
-//   { name: '✅ Home', href: '/', icon: null, current: false },
-//   { name: '✅ Brand', href: '/brand', icon: null, current: false },
-//   { name: '✅ Accessibility', href: '/accessibility', icon: null, current: false },
-//   { name: '✅ Logo', href: '/logo', icon: null, current: false },
-//   { name: '✅ BPA Logo', href: '/logo-bpa', icon: null, current: false },
-//   { name: '✅ Partner Logos', href: '/partner-logos', icon: null, current: false },
-//   { name: 'Typography', href: '/typography', icon: null, current: false },
-//   { name: 'Colour', href: '/colour', icon: null, current: false },
-//   { name: 'Graphics', href: '/graphics', icon: null, current: false },
-//   { name: 'Photography', href: '/photography', icon: null, current: false },
-//   { name: 'Social', href: '/social', icon: null, current: false },
-//   { name: 'Application', href: '/application', icon: null, current: false },
-// ]
+const navigation = [
+  { name: '✅ Home', href: '/', icon: null, current: false },
+  { name: '✅ Brand', href: '/brand', icon: null, current: false },
+  { name: '✅ Accessibility', href: '/accessibility', icon: null, current: false },
+  { name: '✅ Logo', href: '/logo', icon: null, current: false },
+  { name: '✅ BPA Logo', href: '/logo-bpa', icon: null, current: false },
+  { name: '✅ Partner Logos', href: '/partner-logos', icon: null, current: false },
+  { name: 'Typography', href: '/typography', icon: null, current: false },
+  { name: 'Colour', href: '/colour', icon: null, current: false },
+  { name: 'Graphics', href: '/graphics', icon: null, current: false },
+  { name: 'Photography', href: '/photography', icon: null, current: false },
+  { name: 'Social', href: '/social', icon: null, current: false },
+  { name: 'Application', href: '/application', icon: null, current: false },
+]
 
 
 import logoAsset from '../assets/logo/ParalympicsGB-Colour.svg';
