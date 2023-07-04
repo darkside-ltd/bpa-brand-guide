@@ -10,6 +10,58 @@ import { Image } from '@astrojs/image/components';
 import accentUse from "../../assets/accent-use.png";
 import Imag from '../../components/Imag.astro';
 
+
+	--new--blue: #45A6EB;
+	--new--blue-2: #0065B3;
+	--new--blue-3: #0D034C;
+
+	--new--blue-2--blue-1: #F9FAFD;
+	--new--blue-2--blue-2: #EAEDF7;
+	--new--blue-2--blue-3: #CBD4EC;
+	--new--blue-2--blue-4: #ADBCE0;
+	--new--blue-2--blue-5: #8DA4D5;
+	--new--blue-2--blue-6: #688CC8;
+	--new--blue-2--blue-7: #3B73BB;
+	--new--blue-2--blue-8-: #0768AA;
+	--new--blue-2--blue-9: #164C84;
+	--new--blue-2--blue-10: #193C66;
+
+	--union--blue-1: #FAFAFC;
+	--union--blue-2: #EEEDF4;
+	--union--blue-3: #D5D3E3;
+	--union--blue-4: #BCB9D3;
+	--union--blue-5: #A4A1C3;
+	--union--blue-6: #8A86B2;
+	--union--blue-7: #6F6DA1;
+	--union--blue-8: #5A5993;
+	--union--blue-9: #424484;
+	--union--blue-10: #2C3478;
+
+	--union--red-1: #FEF8F8;
+	--union--red-2: #FEE9E6;
+	--union--red-3: #FBCBC3;
+	--union--red-4: #F5A9A2;
+	--union--red-5: #EC8882;
+	--union--red-6: #E06460;
+	--union--red-7: #D1363F;
+	--union--red-8-: #BC132C;
+	--union--red-9: #931924;
+	--union--red-10: #72191E;
+
+	--red--primary--red: #E31B23;
+	--blue--primary--blue: #005288;
+
+	--grey--black: #111111;
+	--grey--grey-1: #333333;
+	--grey--grey-2: #666666;
+	--grey--grey-3: #999999;
+	--grey--grey-4: #CCCCCC;
+	--grey--white: #FFFFFF;
+
+	--agitos--red: #E52322;
+	--agitos--blue: #0075BF;
+	--agitos--green: #009640;
+
 Our primary purple pays tribute to the disabled community’s colour of choice. And it expands on the tints and shades available allowing us to subtly inject our primary brand colour into lighter and darker elements. A vibrant accent colour is used to provide interest for decorative elements to an otherwise monochromatic colour scheme.
 
 ## Palette
@@ -145,39 +197,56 @@ If for some reason you wanted to use the accent colour where the primary colour 
 
 ``` css
 /* Color styles */
---toyota--red: #FF0022;
---greyscale---ghost: #FAF9FE;
---greyscale---lavender: #ECECFD;
---greyscale---lighter--purple: #D1D1F9;
---greyscale---light--purple: #B6B8EF;
---greyscale--9-f-a0-d0: #9FA0D0;
---greyscale--8788-a-f: #8788AF;
---greyscale--6-f6-f8-f: #6F6F8F;
---greyscale--5-c5-d76: #5C5D76;
---greyscale---independence: #49495D;
---greyscale--3-a3-a49: #3A3A49;
---green--10: #F4FDF0;
---green--20: #D8F6CB;
---green--30--accent--green: #99E880;
---green--40: #82CF6B;
---green--50: #73B45E;
---green--629851: #629851;
---green--527-d44: #527D44;
---green--456839: #456839;
---purple--10: #F4EAFE;
---purple--20: #E3CBFC;
---purple--30: #D1ADF9;
---purple--40: #BE8FF6;
---purple--50: #A76EF2;
---purple--100: #8C4BEE;
---purple--200: #732BEA;
---purple--300--primary--purple: #5A16CA;
---purple--400: #49179B;
---purple--500: #3D088C;
---purple--600: #330E6F;
---purple--700: #291152;
---purple--800: #201338;
---purple--900--xiketic: #1A1423;
+	--new--blue: #45A6EB;
+	--new--blue-2: #0065B3;
+	--new--blue-3: #0D034C;
+
+	--new--blue-2--blue-1: #F9FAFD;
+	--new--blue-2--blue-2: #EAEDF7;
+	--new--blue-2--blue-3: #CBD4EC;
+	--new--blue-2--blue-4: #ADBCE0;
+	--new--blue-2--blue-5: #8DA4D5;
+	--new--blue-2--blue-6: #688CC8;
+	--new--blue-2--blue-7: #3B73BB;
+	--new--blue-2--blue-8-: #0768AA;
+	--new--blue-2--blue-9: #164C84;
+	--new--blue-2--blue-10: #193C66;
+
+	--union--blue-1: #FAFAFC;
+	--union--blue-2: #EEEDF4;
+	--union--blue-3: #D5D3E3;
+	--union--blue-4: #BCB9D3;
+	--union--blue-5: #A4A1C3;
+	--union--blue-6: #8A86B2;
+	--union--blue-7: #6F6DA1;
+	--union--blue-8: #5A5993;
+	--union--blue-9: #424484;
+	--union--blue-10: #2C3478;
+
+	--union--red-1: #FEF8F8;
+	--union--red-2: #FEE9E6;
+	--union--red-3: #FBCBC3;
+	--union--red-4: #F5A9A2;
+	--union--red-5: #EC8882;
+	--union--red-6: #E06460;
+	--union--red-7: #D1363F;
+	--union--red-8-: #BC132C;
+	--union--red-9: #931924;
+	--union--red-10: #72191E;
+
+	--red--primary--red: #E31B23;
+	--blue--primary--blue: #005288;
+
+	--grey--black: #111111;
+	--grey--grey-1: #333333;
+	--grey--grey-2: #666666;
+	--grey--grey-3: #999999;
+	--grey--grey-4: #CCCCCC;
+	--grey--white: #FFFFFF;
+
+	--agitos--red: #E52322;
+	--agitos--blue: #0075BF;
+	--agitos--green: #009640;
 
 ```
 

@@ -14,10 +14,10 @@ const data = await getEntryBySlug('data', '0-index');
 const allPosts = await getCollection("data");
 const nextPost = allPosts[1];
 import VideoHero from '../components/VideoHero.astro';
-import localImage from "../assets/logo/Primary.svg";
+import localImage from "../assets/logo/ParalympicsGB-Colour.svg";
 ---
 
-<Layout title="Every Body Moves — Digital Brand Guide">
+<Layout title="ParalympicsGB — Digital Brand Guide">
 	<SideNav client:visible>
 		<VideoHero src={localImage} alt="Some alt text" />
 	</SideNav>

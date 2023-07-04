@@ -57,10 +57,10 @@ const navigation = [
 ]
 
 
-import logoAsset from '../assets/logo/Primary.svg';
-import logoHorizontal from '../assets/logo/horizontal-logo.svg';
+import logoAsset from '../assets/logo/ParalympicsGB-white.svg';
+import logoHorizontal from '../assets/logo/ParalympicsGB-Colour-h.svg';
 
-const logo = { src: logoAsset.src, alt: 'Every Body Moves' }
+const logo = { src: logoAsset.src, alt: 'ParalympicsGB' }
 
 const sidebarOpen = ref(false)
 
@@ -88,7 +88,7 @@ const sidebarOpen = ref(false)
               <!-- Sidebar component, swap this element with another sidebar if you like -->
               <div class="flex grow flex-col gap-y-5 overflow-y-auto bg-4 px-6 pb-4">
                 <div class="flex flex-col py-16 shrink-0 items-start justify-center">
-                 <!-- <a href="/"><img class="h-24 w-auto" :src="logo.src" alt="Every Body Moves" /></a> -->
+                 <!-- <a href="/"><img class="h-24 w-auto" :src="logo.src" alt="ParalympicsGB" /></a> -->
                 </div>
                 
                 <nav class="flex flex-1 flex-col">
@@ -122,7 +122,7 @@ const sidebarOpen = ref(false)
       <!-- Sidebar component, swap this element with another sidebar if you like -->
       <div class="flex grow flex-col gap-y-5 overflow-y-auto bg-4 px-6 pb-4">
         <div class="flex flex-col py-6 shrink-0 items-start justify-center">
-          <a href="/"><img class="h-24 w-auto" :src="logo.src" alt="Every Body Moves" /></a>
+          <a href="/"><img class="h-24 w-auto" :src="logo.src" alt="ParalympicsGB" /></a>
         </div>
         <nav class="flex flex-1 flex-col">
           <ul role="list" class="flex flex-1 flex-col gap-y-7">
@@ -147,15 +147,15 @@ const sidebarOpen = ref(false)
     </div>
 
     <div class="lg:pl-72">
-      <div class="lg:hidden sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 bg-4 px-4 sm:gap-x-6 sm:px-6 lg:px-8">
+      <div class="lg:hidden sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 bg-white px-4 sm:gap-x-6 sm:px-6 lg:px-8">
 
         <button type="button" class="-m-2.5 p-2.5 text-gray-700 lg:hidden" @click="sidebarOpen = true">
           <span class="sr-only">Open sidebar</span>
-          <Bars3Icon class="h-6 w-6 text-white" aria-hidden="true" />
+          <Bars3Icon class="h-6 w-6 text-black/50" aria-hidden="true" />
         </button>
 
         <!-- Separator -->
-        <div class="h-6 w-px bg-white/10 lg:hidden" aria-hidden="true" />
+        <div class="h-6 w-px bg-black/10 lg:hidden" aria-hidden="true" />
 
         <div class="flex flex-1 gap-x-4 self-stretch lg:gap-x-6">
           <!-- <form class="relative flex flex-1" action="#" method="GET">
@@ -166,7 +166,7 @@ const sidebarOpen = ref(false)
           <div class="flex items-center gap-x-4 lg:gap-x-6">
 
             <div class="flex">
-          <a href="/"><img class="h-8 w-auto" :src="logoHorizontal.src" alt="Every Body Moves" /></a>
+          <a href="/"><img class="h-8 w-auto" :src="logoHorizontal.src" alt="ParalympicsGB" /></a>
         </div>
 
             <!-- <button type="button" class="-m-2.5 p-2.5 text-gray-400 hover:text-gray-500">
