@@ -27,7 +27,7 @@ import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/vue/20/solid'
 import { getCollection } from 'astro:content'
 
     const allPosts = await getCollection("data");
-    const navigation = allPosts.map((post, i) => {
+    const navigation = allPosts.slice(0, -1).map((post, i) => {
 
     const title = post.data.title
     let href = post.data.url
