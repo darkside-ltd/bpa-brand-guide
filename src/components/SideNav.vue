@@ -45,19 +45,20 @@ import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/vue/20/solid'
 
 const navigation = [
   { name: '✅ Home', href: '/', icon: null, current: false },
-  { name: 'Strategy', href: '/strategy', icon: null, current: false },
+  { name: '✅ Brand', href: '/brand', icon: null, current: false },
   { name: '✅ Accessibility', href: '/accessibility', icon: null, current: false },
-  { name: '✅ Typography', href: '/typography', icon: null, current: false },
-  { name: '✅ Logo', href: '/logo', icon: null, current: false },
-  { name: '✅ Colour', href: '/colour', icon: null, current: false },
-  { name: '✅ Imagery', href: '/imagery', icon: null, current: false },
-  { name: '✅ Graphics', href: '/graphics', icon: null, current: false },
+  { name: 'Logo', href: '/logo', icon: null, current: false },
+  { name: 'BPA Logo', href: '/logo-bpa', icon: null, current: false },
+  { name: 'Typography', href: '/typography', icon: null, current: false },
+  { name: 'Colour', href: '/colour', icon: null, current: false },
+  { name: 'Imagery', href: '/imagery', icon: null, current: false },
+  { name: 'Graphics', href: '/graphics', icon: null, current: false },
   { name: 'Social', href: '/social', icon: null, current: false },
-  { name: '✅ Application', href: '/application', icon: null, current: false },
+  { name: 'Application', href: '/application', icon: null, current: false },
 ]
 
 
-import logoAsset from '../assets/logo/ParalympicsGB-white.svg';
+import logoAsset from '../assets/logo/ParalympicsGB-Colour.svg';
 import logoHorizontal from '../assets/logo/ParalympicsGB-Colour-h.svg';
 
 const logo = { src: logoAsset.src, alt: 'ParalympicsGB' }
@@ -86,7 +87,7 @@ const sidebarOpen = ref(false)
                 </div>
               </TransitionChild>
               <!-- Sidebar component, swap this element with another sidebar if you like -->
-              <div class="flex grow flex-col gap-y-5 overflow-y-auto bg-4 px-6 pb-4">
+              <div class="flex grow flex-col gap-y-5 overflow-y-auto bg-5 px-6 pb-4">
                 <div class="flex flex-col py-16 shrink-0 items-start justify-center">
                  <!-- <a href="/"><img class="h-24 w-auto" :src="logo.src" alt="ParalympicsGB" /></a> -->
                 </div>
@@ -120,9 +121,9 @@ const sidebarOpen = ref(false)
     <!-- Static sidebar for desktop -->
     <div class="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col desktop-nav">
       <!-- Sidebar component, swap this element with another sidebar if you like -->
-      <div class="flex grow flex-col gap-y-5 overflow-y-auto bg-4 px-6 pb-4">
+      <div class="flex grow flex-col gap-y-5 overflow-y-auto bg-5 px-6 pb-4">
         <div class="flex flex-col py-6 shrink-0 items-start justify-center">
-          <a href="/"><img class="h-24 w-auto" :src="logo.src" alt="ParalympicsGB" /></a>
+          <a href="/"><img class="h-32 w-auto" :src="logo.src" alt="ParalympicsGB" /></a>
         </div>
         <nav class="flex flex-1 flex-col">
           <ul role="list" class="flex flex-1 flex-col gap-y-7">
@@ -137,7 +138,7 @@ const sidebarOpen = ref(false)
               </ul>
             </li>
             <li class="mt-auto">
-              <a href="/information" class="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm leading-6 text-indigo-200 hover:bg-indigo-700 hover:text-white">
+              <a href="/information" class="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm leading-6 hover:bg-indigo-700 hover:text-white">
                 Contact and Support
               </a>
             </li>

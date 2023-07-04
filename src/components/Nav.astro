@@ -2,9 +2,7 @@
 import TableOfContents from './TableOfContents.astro';
 
 const { prevPost, nextPost } = Astro.props;
-// console.log({nextPost})
-
-const nextPostSlug = nextPost?.data?.title?.toLowerCase()
+const nextPostSlug = nextPost?.data?.url
 ---
 
 { nextPostSlug && (<div class="bg-3 footer-nav">
