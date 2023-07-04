@@ -1,0 +1,92 @@
+---
+import pant from 'nearest-pantone';
+
+const { name, from, to, pantone } = Astro.props;
+
+if(!from || !to) return
+
+const urlFrom = "https://www.thecolorapi.com/id?hex=" + from;
+const urlTo = "https://www.thecolorapi.com/id?hex=" + to;
+
+const responseFrom = await fetch(urlFrom);
+const dataFrom = await responseFrom.json();
+
+const responseTo = await fetch(urlTo);
+const dataTo = await responseTo.json();
+
+async function getPantone(v) {
+    return pant.getClosestColor(v)
+}
+const pantoneColorFrom = await getPantone(dataFrom?.hex?.value);
+let pantoneValueFrom  = pantoneColorFrom?.pantone;
+
+const pantoneColorTo = await getPantone(dataTo?.hex?.value);
+let pantoneValueTo  = pantoneColorTo?.pantone;
+
+if(pantone) {
+    pantoneValueFrom = pantone;
+    pantoneValueTo = pantone;
+}
+
+let cmykFrom = dataFrom.cmyk.value;
+cmykFrom = cmykFrom.replace('cmyk','').replace('(','').replace(')','');
+
+let cmykTo = dataTo.cmyk.value;
+cmykTo = cmykTo.replace('cmyk','').replace('(','').replace(')','');
+
+let rgbFrom = dataFrom.rgb.value;
+rgbFrom = rgbFrom.replace('rgb','').replace('(','').replace(')','');
+
+let rgbTo = dataTo.rgb.value;
+rgbTo = rgbTo.replace('rgb','').replace('(','').replace(')','');
+
+---
+
+<div class="colour">
+    <div class="block-colour" style={`color: ${dataFrom.contrast.value}; background: linear-gradient(180deg, ${dataFrom.hex.value} 0%, ${dataTo.hex.value} 100%)`}>
+        <span class="name">{name}</span><br>
+
+        <div class="colour-values">
+            <div class="label">From:</div><div></div>
+            <div class="label">HEX</div><div class="value">{dataFrom.hex.value}</div>
+            <div class="label">RGB</div><div class="value">{rgbFrom}</div>
+            <div class="label">CMYK</div><div class="value">{cmykFrom}</div>
+            {pantoneValueFrom && ( <div class="label">Pantone</div><div class="value">{pantoneValueFrom}</div> )}
+
+            <div class="label">To:</div><div></div>
+            <div class="label">HEX</div><div class="value">{dataTo.hex.value}</div>
+            <div class="label">RGB</div><div class="value">{rgbTo}</div>
+            <div class="label">CMYK</div><div class="value">{cmykTo}</div>
+            {pantoneValueTo && ( <div class="label">Pantone</div><div class="value">{pantoneValueTo}</div> )}
+        </div>
+    </div>
+</div>
+
+<style lang="scss" scoped>
+.block-colour {
+    padding:1em;
+    padding-top:4em;
+}
+
+.name {
+    font-weight:900;
+}
+
+.colour {
+    display: inline-block;
+    width: 100%;
+}
+
+.label{
+    user-select: none;
+}
+
+.colour-values{
+    display:inline-grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 24px;
+    .value {
+        font-variant-numeric: tabular-nums;
+    }
+}
+</style>

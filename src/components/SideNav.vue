@@ -1,6 +1,5 @@
 
 <script setup>
-// import { getCollection } from 'astro:content';
 import { ref } from 'vue'
 import {
   Dialog,
@@ -25,37 +24,39 @@ import {
   XMarkIcon,
 } from '@heroicons/vue/24/outline'
 import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/vue/20/solid'
+import { getCollection } from 'astro:content'
 
-    // const allPosts = await getCollection("data");
-    // const navigation = allPosts.map((post, i) => {
+    const allPosts = await getCollection("data");
+    const navigation = allPosts.map((post, i) => {
 
-    // const title = post.data.title
-    // let href = post.data.title.toLowerCase()
-    // if(href === "intro") href=""
-    // href = "/" + href
-    // // console.log({href})
-    // return {
-    //   name: title,
-    //   href: href,
-    //   icon: null,
-    //   current: false
-    // }
+    const title = post.data.title
+    let href = post.data.url
+    if(href === "intro") href=""
+    href = "/" + href
+    // console.log({href})
+    return {
+      name: title,
+      href: href,
+      icon: null,
+      current: false
+    }
 
-    // });
+    });
 
-const navigation = [
-  { name: '✅ Home', href: '/', icon: null, current: false },
-  { name: '✅ Brand', href: '/brand', icon: null, current: false },
-  { name: '✅ Accessibility', href: '/accessibility', icon: null, current: false },
-  { name: 'Logo', href: '/logo', icon: null, current: false },
-  { name: 'BPA Logo', href: '/logo-bpa', icon: null, current: false },
-  { name: 'Typography', href: '/typography', icon: null, current: false },
-  { name: 'Colour', href: '/colour', icon: null, current: false },
-  { name: 'Imagery', href: '/imagery', icon: null, current: false },
-  { name: 'Graphics', href: '/graphics', icon: null, current: false },
-  { name: 'Social', href: '/social', icon: null, current: false },
-  { name: 'Application', href: '/application', icon: null, current: false },
-]
+// const navigation = [
+//   { name: '✅ Home', href: '/', icon: null, current: false },
+//   { name: '✅ Brand', href: '/brand', icon: null, current: false },
+//   { name: '✅ Accessibility', href: '/accessibility', icon: null, current: false },
+//   { name: '✅ Logo', href: '/logo', icon: null, current: false },
+//   { name: '✅ BPA Logo', href: '/logo-bpa', icon: null, current: false },
+//   { name: '✅ Partner Logos', href: '/partner-logos', icon: null, current: false },
+//   { name: 'Typography', href: '/typography', icon: null, current: false },
+//   { name: 'Colour', href: '/colour', icon: null, current: false },
+//   { name: 'Graphics', href: '/graphics', icon: null, current: false },
+//   { name: 'Photography', href: '/photography', icon: null, current: false },
+//   { name: 'Social', href: '/social', icon: null, current: false },
+//   { name: 'Application', href: '/application', icon: null, current: false },
+// ]
 
 
 import logoAsset from '../assets/logo/ParalympicsGB-Colour.svg';
@@ -97,15 +98,15 @@ const sidebarOpen = ref(false)
                     <li>
                       <ul role="list" class="-mx-2 space-y-1">
                         <li v-for="item in navigation" :key="item.name">
-                          <a :href="item.href" :class="[item.current ? 'bg-indigo-700 text-white' : 'text-indigo-200 hover:text-white hover:bg-indigo-700', 'group flex gap-x-3 rounded-md p-2 leading-6 font-regular text-lg']">
-                            <component :is="item.icon" :class="[item.current ? 'text-white' : 'text-indigo-200 group-hover:text-white', 'h-6 w-6 shrink-0']" aria-hidden="true" />
+                          <a :href="item.href" :class="[item.current ? 'bg-slate-900 text-white' : 'text-slate-900 hover:text-white hover:bg-slate-900', 'group flex gap-x-3 rounded-md p-2 leading-6 font-regular text-lg']">
+                            <component :is="item.icon" :class="[item.current ? 'text-white' : 'text-slate-900 group-hover:text-white', 'h-6 w-6 shrink-0']" aria-hidden="true" />
                             {{ item.name }}
                           </a>
                         </li>
                       </ul>
                     </li>
                     <li class="mt-auto">
-                      <a href="/information" class="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm leading-6 text-indigo-200 hover:bg-indigo-700 hover:text-white">
+                      <a href="/information" class="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm leading-6 text-slate-900 hover:bg-slate-900 hover:text-white">
                         Contact and Support
                       </a>
                     </li>
@@ -130,15 +131,15 @@ const sidebarOpen = ref(false)
             <li>
               <ul role="list" class="-mx-2 space-y-1">
                 <li v-for="item in navigation" :key="item.name">
-                  <a :href="item.href" :class="[item.current ? 'bg-indigo-700 text-white' : 'text-indigo-200 hover:text-white hover:bg-indigo-700', 'group flex gap-x-3 rounded-md p-2 leading-6 font-regular text-lg']">
-                    <component :is="item.icon" :class="[item.current ? 'text-white' : 'text-indigo-200 group-hover:text-white', 'h-6 w-6 shrink-0']" aria-hidden="true" />
+                  <a :href="item.href" :class="[item.current ? 'bg-slate-900 text-white' : 'text-slate-900 hover:text-white hover:bg-slate-900', 'group flex gap-x-3 rounded-md p-2 leading-6 font-regular text-lg']">
+                    <component :is="item.icon" :class="[item.current ? 'text-white' : 'text-slate-900 group-hover:text-white', 'h-6 w-6 shrink-0']" aria-hidden="true" />
                     {{ item.name }}
                   </a>
                 </li>
               </ul>
             </li>
             <li class="mt-auto">
-              <a href="/information" class="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm leading-6 hover:bg-indigo-700 hover:text-white">
+              <a href="/information" class="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm leading-6 hover:bg-slate-900 hover:text-white">
                 Contact and Support
               </a>
             </li>
@@ -207,6 +208,6 @@ main{
   flex-direction: column;
 }
 .desktop-nav{
-  border-right: 2px solid var(--purple--900--xiketic);
+  border-right: 2px solid var(--union--blue-3);
 }
 </style>

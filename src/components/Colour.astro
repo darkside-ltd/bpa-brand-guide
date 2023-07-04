@@ -3,20 +3,18 @@ import pant from 'nearest-pantone';
 
 const { name, hex, pantone } = Astro.props;
 
+if(!hex) return
+
 const colour = hex
 const url = "https://www.thecolorapi.com/id?hex=" + colour
 const response = await fetch(url);
 const data = await response.json();
-// const result = data.results[0];
-// console.log({data})
 
 async function getPantone(v) {
-    // console.log({v})
     return pant.getClosestColor(v)
 }
 const pantoneColor = await getPantone(data?.hex?.value) 
 let pantoneValue  = pantoneColor?.pantone
-// Pantone Override
 if(pantone) pantoneValue = pantone
 
 let cmyk = data.cmyk.value
@@ -32,27 +30,41 @@ rgb = rgb.replace(')','')
 ---
 
 <div class="colour">
-    <div class="block-colour" style=`color: ${data.contrast.value}; background-color:${data.hex.value}`>
-        {name}<br>
+    <div class="block-colour" style={`color: ${data.contrast.value}; background-color:${data.hex.value}`}>
+        <span class="name">{name}</span><br>
 
         <div class="colour-values">
-            <div>HEX</div><div class="value">{data.hex.value}</div>
-            <div>RGB</div><div class="value">{rgb}</div>
-            <div>CMYK</div><div class="value">{cmyk}</div>
-            {pantoneValue && ( <div>Pantone</div><div class="value">{pantoneValue}</div> )}
+            <div class="label">HEX</div><div class="value">{data.hex.value}</div>
+            <div class="label">RGB</div><div class="value">{rgb}</div>
+            <div class="label">CMYK</div><div class="value">{cmyk}</div>
+            {pantoneValue && ( <div class="label">Pantone</div><div class="value">{pantoneValue}</div> )}
         </div>
     </div>
 </div>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .block-colour {
-padding:1em;
-padding-top:4em;
+    padding:1em;
+    padding-top:4em;
+}
+
+.name {
+    font-weight:900;
+}
+
+.colour {
+    display: inline-block;
+    width: 100%;
+}
+
+.label{
+    user-select: none;
 }
 
 .colour-values{
     display:inline-grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 24px;
     .value {
         font-variant-numeric: tabular-nums;
     }

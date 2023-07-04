@@ -110,6 +110,7 @@ const { title, metaDesc } = Astro.props;
 	--color-bg-3: var(--union--blue-2);
 	--color-bg-4: var(--new--blue-3);
 	--color-bg-5: var(--union--blue-1);
+	--color-bg-menu: var(--union--blue-9);
 	--color: var(--grey--black);
 	--bg-body: var(--union--blue-1);
 	--text-color: var(--grey--black);
@@ -298,4 +299,13 @@ const { title, metaDesc } = Astro.props;
 	.bg-3 {background-color: var(--color-bg-3) !important;}
 	.bg-4 {background-color: var(--color-bg-4) !important;}
 	.bg-5 {background-color: var(--color-bg-5) !important;}
+	.bg-menu{background-color: var(--color-bg-menu);}
+
+	@media(min-width:420px){
+		.stack-colours{
+			// display:grid;
+			// grid-template-columns: 1fr 1fr;
+			columns: 2;
+		}
+	}
 </style>

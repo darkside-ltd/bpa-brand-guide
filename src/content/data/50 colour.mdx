@@ -1,134 +1,148 @@
 ---
-title: Colour
+title: ✅ Colour
 url: colour
 intro: The colour palette and guidelines for the brand's visual identity, ensuring that all colors used in the brand's materials are consistent and reflect the brand's values.
 ---
 import Colour from '../../components/Colour.astro';
+import Gradient from '../../components/Gradient.astro';
 import ColourContrast from '../../components/ColourContrast.astro';
 import colours from '../../assets/colours.json'
 import { Image } from '@astrojs/image/components';
 import accentUse from "../../assets/accent-use.png";
 import Imag from '../../components/Imag.astro';
+import img2 from "../../assets/agitos.svg";
 
 
-	--new--blue: #45A6EB;
-	--new--blue-2: #0065B3;
-	--new--blue-3: #0D034C;
+The core colours of the brand come from the union flag. Blue, Red, and White. Alongside the primary colours, we have a series of shades and tints that use the CEILAB colourspace for the most consistent appearance across digital media.
 
-	--new--blue-2--blue-1: #F9FAFD;
-	--new--blue-2--blue-2: #EAEDF7;
-	--new--blue-2--blue-3: #CBD4EC;
-	--new--blue-2--blue-4: #ADBCE0;
-	--new--blue-2--blue-5: #8DA4D5;
-	--new--blue-2--blue-6: #688CC8;
-	--new--blue-2--blue-7: #3B73BB;
-	--new--blue-2--blue-8-: #0768AA;
-	--new--blue-2--blue-9: #164C84;
-	--new--blue-2--blue-10: #193C66;
+## Logo Colours
 
-	--union--blue-1: #FAFAFC;
-	--union--blue-2: #EEEDF4;
-	--union--blue-3: #D5D3E3;
-	--union--blue-4: #BCB9D3;
-	--union--blue-5: #A4A1C3;
-	--union--blue-6: #8A86B2;
-	--union--blue-7: #6F6DA1;
-	--union--blue-8: #5A5993;
-	--union--blue-9: #424484;
-	--union--blue-10: #2C3478;
+### Primary Blue
 
-	--union--red-1: #FEF8F8;
-	--union--red-2: #FEE9E6;
-	--union--red-3: #FBCBC3;
-	--union--red-4: #F5A9A2;
-	--union--red-5: #EC8882;
-	--union--red-6: #E06460;
-	--union--red-7: #D1363F;
-	--union--red-8-: #BC132C;
-	--union--red-9: #931924;
-	--union--red-10: #72191E;
+<Colour hex="005288" name="Primary Blue" pantone="301 C"/>
 
-	--red--primary--red: #E31B23;
-	--blue--primary--blue: #005288;
-
-	--grey--black: #111111;
-	--grey--grey-1: #333333;
-	--grey--grey-2: #666666;
-	--grey--grey-3: #999999;
-	--grey--grey-4: #CCCCCC;
-	--grey--white: #FFFFFF;
-
-	--agitos--red: #E52322;
-	--agitos--blue: #0075BF;
-	--agitos--green: #009640;
-
-Our primary purple pays tribute to the disabled community’s colour of choice. And it expands on the tints and shades available allowing us to subtly inject our primary brand colour into lighter and darker elements. A vibrant accent colour is used to provide interest for decorative elements to an otherwise monochromatic colour scheme.
-
-## Palette
-
-<Colour hex="1A1423" name="Xiketic" />
-<Colour hex="5A16CA" name="Primary Purple" pantone="Violet C"/>
-<Colour hex="B6B8EF" name="Light Purple" pantone="270 C"/>
-<Colour hex="ECECFD" name="Lavender" pantone="7443 C"/>
-<Colour hex="FAF9FE" name="Ghost" pantone="White"/>
-<Colour hex="99E880" name="Accent" pantone="7487 C" />
+### Primary Blue Tints and Shades
+<div class="stack-colours">
+<Colour hex="F9FAFC" name="Primary Blue 1" />
+<Colour hex="EAEEF4" name="Primary Blue 2" />
+<Colour hex="CDD5E3" name="Primary Blue 3" />
+<Colour hex="B0BDD3" name="Primary Blue 4" />
+<Colour hex="92A5C4" name="Primary Blue 5" />
+<Colour hex="728DB2" name="Primary Blue 6" />
+<Colour hex="5074A1" name="Primary Blue 7" />
+<Colour hex="306193" name="Primary Blue 8" />
+<Colour hex="064E80" name="Primary Blue 9" />
+<Colour hex="123D63" name="Primary Blue 10" />
+</div>
 
 
-## Tints and Shades
-
-Primary colours have tints and shades through either end of the spectrum and are designed to be used a base colours for background and foreground elements.
-
-**60-30-10**
-
-To bring the balance into the design, the colours should be combined in the proportion of 60%–30%–10%. 
-
-The biggest part should go to the primary hue, the third of the composition takes secondary colour and 10% percent goes to the colour which helps to make the accents.
-
-### Purple
-
-<Colour hex="F4EAFE" name="" />
-<Colour hex="E3CBFC" name="" />
-<Colour hex="D1ADF9" name="" />
-<Colour hex="BE8FF6" name="" />
-<Colour hex="A76EF2" name="" />
-<Colour hex="8C4BEE" name="" />
-<Colour hex="732BEA" name="" />
-<Colour hex="5A16CA" name="Primary Purple" pantone="Violet C"/>
-<Colour hex="49179B" name="" />
-<Colour hex="3D088C" name="" />
-<Colour hex="330E6F" name="" />
-<Colour hex="291152" name="" />
-<Colour hex="201338" name="" />
-<Colour hex="1A1423" name="Xiketic" />
 
 
-### Greyscale
+### Primary Red
 
-<Colour hex="FAF9FE" name="Ghost" />
-<Colour hex="ECECFD" name="Lavender" />
-<Colour hex="D1D1F9" name="Lighter Purple" />
-<Colour hex="B6B8EF" name="Light Purple" pantone="270 C"/>
-<Colour hex="9FA0D0" name="" />
-<Colour hex="8788AF" name="" />
-<Colour hex="6F6F8F" name="" />
-<Colour hex="5C5D76" name="" />
-<Colour hex="49495D" name="Independence" />
-<Colour hex="3A3A49" name="" />
+<Colour hex="E31B23" name="Primary Red" pantone="485 C"/>
 
-### Accent
+### Primary Red Tints and Shades
 
-<Colour hex="F4FDF0" name="" />
-<Colour hex="D8F6CB" name="" />
-<Colour hex="99E880" name="Accent Green" />
-<Colour hex="82CF6B" name="" />
-<Colour hex="73B45E" name="" />
-<Colour hex="629851" name="" />
-<Colour hex="527D44" name="" />
-<Colour hex="456839" name="" />
+<div class="stack-colours">
+<Colour hex="FFF8F7" name="Primary Red 1" />
+<Colour hex="FFE9E4" name="Primary Red 2" />
+<Colour hex="FFC8BC" name="Primary Red 3" />
+<Colour hex="FFA595" name="Primary Red 4" />
+<Colour hex="FB806E" name="Primary Red 5" />
+<Colour hex="F05647" name="Primary Red 6" />
+<Colour hex="E01B23" name="Primary Red 7" />
+<Colour hex="B91F1F" name="Primary Red 8" />
+<Colour hex="901F1A" name="Primary Red 9" />
+<Colour hex="701C17" name="Primary Red 10" />
+</div>
 
-### Toyota Red
+## Brand Colours
 
-<Colour hex="FF0022" name="Toyota Red" />
+Union and Secondary blue have been added to the palette to expand the design options available. Union blue is a colour closer to the original union flag specification than our primary blue, but it’s not to be used as a replacement.
+
+### Union Blue
+
+<Colour hex="0d034c" name="Union Blue" pantone="274 C"/>
+
+### Union Blue Tints and Shades
+
+<div class="stack-colours">
+<Colour hex="FAFAFB" name="Union Blue 1" small />
+<Colour hex="EFECF3" name="Union Blue 2" small/>
+<Colour hex="D8D2E1" name="Union Blue 3" small/>
+<Colour hex="C1B8CF" name="Union Blue 4" small/>
+<Colour hex="AB9FBE" name="Union Blue 5" small/>
+<Colour hex="9384AC" name="Union Blue 6" small/>
+<Colour hex="7B6A99" name="Union Blue 7" small/>
+<Colour hex="68568A" name="Union Blue 8" small/>
+<Colour hex="54407B" name="Union Blue 9" small/>
+<Colour hex="43306E" name="Union Blue 10" small/>
+<Colour hex="2b1a5d" name="Union Blue 11" small/>
+<Colour hex="0d034c" name="Union Blue" pantone="274 C" small/>
+</div>
+
+### Secondary Blue
+
+<Colour hex="56ABEC" name="Secondary Blue" pantone="284 C"/>
+
+### Secondary Blue Tints and Shades
+
+<div class="stack-colours">
+<Colour hex="F7FAFE" name="Secondary Blue 1" />
+<Colour hex="E4EFFC" name="Secondary Blue 2" />
+<Colour hex="BBD7F7" name="Secondary Blue 3" />
+<Colour hex="8EC1F2" name="Secondary Blue 4" />
+<Colour hex="56ABEC" name="Secondary Blue 5" />
+<Colour hex="4091CD" name="Secondary Blue 6" />
+<Colour hex="3877A7" name="Secondary Blue 7" />
+<Colour hex="326389" name="Secondary Blue 8" />
+<Colour hex="2B4E6B" name="Secondary Blue 9" />
+<Colour hex="243D53" name="Secondary Blue 10" />
+</div>
+
+## Grayscale Colours
+
+<Colour hex="FFFFFF" name="White" pantone="White"/>
+
+<div class="stack-colours">
+<Colour hex="FAFAFA" name="Gray 1" />
+<Colour hex="EDEDED" name="Gray 2" />
+<Colour hex="D4D4D4" name="Gray 3" />
+<Colour hex="BCBCBC" name="Gray 4" />
+<Colour hex="A4A4A4" name="Gray 5" />
+<Colour hex="8B8B8B" name="Gray 6" />
+<Colour hex="727272" name="Gray 7" />
+<Colour hex="5F5F5F" name="Gray 8" />
+<Colour hex="4B4B4B" name="Gray 9" />
+<Colour hex="3B3B3B" name="Gray 10" />
+<Colour hex="262626" name="Gray 11" />
+<Colour hex="111111" name="Black" pantone="Black" />
+</div>
+
+
+## Gradients
+<Gradient from="1E3259" to="3E63AF" name="Primary Blue Gradient" />
+<Gradient from="E31B23" to="D1363F" name="Primary Red Gradient" />
+<Gradient from="0166B4" to="01A2EB" name="Secondary Blue Gradient" />
+<Gradient from="0D034C" to="2F2475" name="Union Blue Gradient" />
+
+
+
+## Agitos Colours
+
+The Agitos is a separate symbol incorporated in to the BPA and ParalympicsGB logos and therefore has its own set of colours. It is important these are always used.
+
+<div class="frame spaced">
+    <Imag src={img2} alt="Agitos Symbol." format="svg" />
+</div>
+
+<Colour hex="F0252D" name="Paralympic Red" pantone="192" />
+<Colour hex="0078D0" name="Paralympic Blue" pantone="3005" />
+<Colour hex="00A651" name="Paralympic Green" pantone="355" />
+
+
+
 
 
 ## WCAG Compliance
@@ -170,26 +184,6 @@ Parts of graphics required to understand the content, except when a particular p
 https://www.w3.org/TR/WCAG21/#non-text-contrast
 
 
-{/*
-## Contrast Safe Colour Combinations
-<ColourContrast colours={colours} />
-*/}
-
-
-
-## Accent Colour Use
-
-Example use cases for the accent colour.
-
-**Breaking the Rules**
-
-While the accent colour is designed to be used for decorative elements. The tints and shades provided are designed to provide flexibility to maintain accessibility standards.
-
-If for some reason you wanted to use the accent colour where the primary colour is normally used, you still have the palette you need.
-
-<div class="frame">
-    <Imag src={accentUse} alt="Examples of accent colour use." format="png" width={1180} height={526}/>
-</div>
 
 ## Colour Code Blocks
 
@@ -197,102 +191,70 @@ If for some reason you wanted to use the accent colour where the primary colour 
 
 ``` css
 /* Color styles */
-	--new--blue: #45A6EB;
-	--new--blue-2: #0065B3;
-	--new--blue-3: #0D034C;
 
-	--new--blue-2--blue-1: #F9FAFD;
-	--new--blue-2--blue-2: #EAEDF7;
-	--new--blue-2--blue-3: #CBD4EC;
-	--new--blue-2--blue-4: #ADBCE0;
-	--new--blue-2--blue-5: #8DA4D5;
-	--new--blue-2--blue-6: #688CC8;
-	--new--blue-2--blue-7: #3B73BB;
-	--new--blue-2--blue-8-: #0768AA;
-	--new--blue-2--blue-9: #164C84;
-	--new--blue-2--blue-10: #193C66;
+	--primary-blue: #005288;
+	--primary-blue-1: #F9FAFC;
+	--primary-blue-2: #EAEEF4;
+	--primary-blue-3: #CDD5E3;
+	--primary-blue-4: #B0BDD3;
+	--primary-blue-5: #92A5C4;
+	--primary-blue-6: #728DB2;
+	--primary-blue-7: #5074A1;
+	--primary-blue-8: #306193;
+	--primary-blue-9: #064E80;
+	--primary-blue-10: #123D63;
 
-	--union--blue-1: #FAFAFC;
-	--union--blue-2: #EEEDF4;
-	--union--blue-3: #D5D3E3;
-	--union--blue-4: #BCB9D3;
-	--union--blue-5: #A4A1C3;
-	--union--blue-6: #8A86B2;
-	--union--blue-7: #6F6DA1;
-	--union--blue-8: #5A5993;
-	--union--blue-9: #424484;
-	--union--blue-10: #2C3478;
+	--primary-red: #E31B23;
+	--primary-red-1: #FEF8F8;
+	--primary-red-2: #FEE9E6;
+	--primary-red-3: #FBCBC3;
+	--primary-red-4: #F5A9A2;
+	--primary-red-5: #EC8882;
+	--primary-red-6: #E06460;
+	--primary-red-7: #D1363F;
+	--primary-red-8-: #BC132C;
+	--primary-red-9: #931924;
+	--primary-red-10: #72191E;
 
-	--union--red-1: #FEF8F8;
-	--union--red-2: #FEE9E6;
-	--union--red-3: #FBCBC3;
-	--union--red-4: #F5A9A2;
-	--union--red-5: #EC8882;
-	--union--red-6: #E06460;
-	--union--red-7: #D1363F;
-	--union--red-8-: #BC132C;
-	--union--red-9: #931924;
-	--union--red-10: #72191E;
+	--union-blue-1: #FAFAFC;
+	--union-blue-2: #EEEDF4;
+	--union-blue-3: #D5D3E3;
+	--union-blue-4: #BCB9D3;
+	--union-blue-5: #A4A1C3;
+	--union-blue-6: #8A86B2;
+	--union-blue-7: #6F6DA1;
+	--union-blue-8: #5A5993;
+	--union-blue-9: #424484;
+	--union-blue-10: #2C3478;
 
-	--red--primary--red: #E31B23;
-	--blue--primary--blue: #005288;
+	--secondary-blue-1: #F9FAFD;
+	--secondary-blue-2: #EAEDF7;
+	--secondary-blue-3: #CBD4EC;
+	--secondary-blue-4: #ADBCE0;
+	--secondary-blue-5: #8DA4D5;
+	--secondary-blue-6: #688CC8;
+	--secondary-blue-7: #3B73BB;
+	--secondary-blue-8-: #0768AA;
+	--secondary-blue-9: #164C84;
+	--secondary-blue-10: #193C66;
 
-	--grey--black: #111111;
-	--grey--grey-1: #333333;
-	--grey--grey-2: #666666;
-	--grey--grey-3: #999999;
-	--grey--grey-4: #CCCCCC;
-	--grey--white: #FFFFFF;
+	--white: #FFFFFF";
+	--gray-1: #FAFAFA;
+	--gray-2: #EDEDED;
+	--gray-3: #D4D4D4;
+	--gray-4: #BCBCBC;
+	--gray-5: #A4A4A4;
+	--gray-6: #8B8B8B;
+	--gray-7: #727272;
+	--gray-8: #5F5F5F;
+	--gray-9: #4B4B4B;
+	--gray-10: #3B3B3B;
+	--gray-11: #262626;
+	--black: #111111;
 
-	--agitos--red: #E52322;
-	--agitos--blue: #0075BF;
-	--agitos--green: #009640;
+	--agitos-red: #E52322;
+	--agitos-blue: #0075BF;
+	--agitos-green: #009640;
 
-```
-
-### JSON
-
-``` json
-{
-  "Toyota Red": "#ff0022",
-  "Greyscale": {
-    "Ghost": "#faf9fe",
-    "Lavender": "#ececfd",
-    "Lighter Purple": "#d1d1f9",
-    "Light Purple": "#b6b8ef",
-    "#9FA0D0": "#9fa0d0",
-    "#8788AF": "#8788af",
-    "#6F6F8F": "#6f6f8f",
-    "#5C5D76": "#5c5d76",
-    "Independence": "#49495d",
-    "#3A3A49": "#3a3a49"
-  },
-  "Green": {
-    "10": "#f4fdf0",
-    "20": "#d8f6cb",
-    "40": "#82cf6b",
-    "50": "#73b45e",
-    "30 Accent Green": "#99e880",
-    "#629851": "#629851",
-    "#527D44": "#527d44",
-    "#456839": "#456839"
-  },
-  "Purple": {
-    "10": "#f4eafe",
-    "20": "#e3cbfc",
-    "30": "#d1adf9",
-    "40": "#be8ff6",
-    "50": "#a76ef2",
-    "100": "#8c4bee",
-    "200": "#732bea",
-    "400": "#49179b",
-    "500": "#3d088c",
-    "600": "#330e6f",
-    "700": "#291152",
-    "800": "#201338",
-    "300 Primary Purple": "#5a16ca",
-    "900 Xiketic": "#1a1423"
-  }
-}
 ```
 
