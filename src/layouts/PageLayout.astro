@@ -10,6 +10,7 @@ const { headings, prevPost, nextPost, post } = Astro.props;
 // console.log({nextPost})
 // console.log({post})
 const isIndex = post?.id === '0 index.mdx'
+const isContact = post?.id === '99 contact.mdx'
 
 let title = post?.data?.title + " — ParalympicsGB Digital Brand Guide"
 // console.log({title})
@@ -23,6 +24,6 @@ let metaDesc = post?.data?.intro
 		<div class="content content-width">
 			<slot />
 		</div>
-		<Nav prevPost={prevPost} nextPost={nextPost} />
+		{!isContact && (<Nav prevPost={prevPost} nextPost={nextPost} />)}
 	</SideNav>
 </Layout>

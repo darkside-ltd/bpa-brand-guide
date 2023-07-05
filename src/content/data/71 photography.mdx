@@ -6,23 +6,21 @@ intro: This section outlines the types of images and visual styles that represen
 import Imag from '../../components/Imag.astro';
 import img1 from "../../assets/photos.jpg";
 import img2 from "../../assets/photo2.jpg";
+import img3 from "../../assets/photos3.png";
 
 ## Photography
 
-Photography should always be genuine. Be that people or activities. Ideally we want to convey movement and or community to our demographic. Some motion blur or out of focus elements are okay because movement isn’t staged, it’s messy and real.
+Let the athletes and sport take centre stage with authentic imagery captured during the height of competition. Imagery should showcase the raw emotion and endeavour required to compete at the highest level in sport.
+Team Announcement imagery should bring out the personality of the athletes in a step away from the typical photography associated with selection announcements.
+
+<div class="frame">
+    <Imag src={img3} alt="Examples of photograpy style." aspectRatio="247:100" format="png" width={1200}/>
+</div>
+
+## Non-athlete Photography
+
+Non-athlete photography should always be genuine. Be that people or activities. Ideally we want to convey movement and or community to our demographic. Some motion blur or out of focus elements are okay because movement isn’t staged, it’s messy and real. 
 
 <div class="frame">
     <Imag src={img1} alt="Examples of photograpy style." aspectRatio="247:100" format="jpg" width={1200}/>
-</div>
-
-## Image Overlay
-
-When using the full colour logos, the background shapes must be used. 
-
-Overlays for the images become optional as the logo itself has sufficient contrast to meet accessibility standards.
-
-We prefer the primary logo over the alternative, and for it to be left aligned over the image. The standard logo clear space rules apply here.
-
-<div class="frame">
-    <Imag src={img2} alt="Examples of overlay style." aspectRatio="178:100" format="jpg" width={1200}/>
 </div>
