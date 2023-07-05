@@ -24,7 +24,8 @@ import {
   XMarkIcon,
 } from '@heroicons/vue/24/outline'
 import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/vue/20/solid'
-import navigation from '../navigation.json'
+import navigation from '../navigation.json';
+
 
 
 // const navigation = [
