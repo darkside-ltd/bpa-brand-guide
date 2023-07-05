@@ -16,6 +16,10 @@ const { title, metaDesc } = Astro.props;
 		<link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml">
 		<meta name="theme-color" content="#ffffff">
 		<meta name="description" content={metaDesc}>
+		<meta property="og:title" content={title}>
+		<meta property="og:description" content={metaDesc}>
+		<meta property="og:image" content="/images/sharing-image.jpg">
+		<meta property="og:url" content="{Astro.request.url.href}">
 		<title>{title}</title>
 	</head>
 	<body class="h-full">
