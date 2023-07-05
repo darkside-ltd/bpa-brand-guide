@@ -24,24 +24,8 @@ import {
   XMarkIcon,
 } from '@heroicons/vue/24/outline'
 import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/vue/20/solid'
-import { getCollection } from 'astro:content'
+import navigation from '../navigation.json'
 
-    const allPosts = await getCollection("data");
-    const navigation = allPosts.slice(0, -1).map((post, i) => {
-
-    const title = post.data.title
-    let href = post.data.url
-    if(href === "intro") href=""
-    href = "/" + href
-    // console.log({href})
-    return {
-      name: title,
-      href: href,
-      icon: null,
-      current: false
-    }
-
-    });
 
 // const navigation = [
 //   { name: 'Home', href: '/', icon: null, current: false },
