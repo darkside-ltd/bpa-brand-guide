@@ -19,7 +19,7 @@ let metaDesc = post?.data?.intro
 ---
 
 <Layout title={title} metaDesc={metaDesc}>
-	<SideNav client:visible>
+	<SideNav client:load>
 		{!isIndex && (<Hero title={post?.data?.title} intro={post?.data?.intro} headings={headings}/>)}
 		<div class="content content-width">
 			<slot />
