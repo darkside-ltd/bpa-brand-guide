@@ -18,8 +18,8 @@ const { title, metaDesc } = Astro.props;
 		<meta name="description" content={metaDesc}>
 		<meta property="og:title" content={title}>
 		<meta property="og:description" content={metaDesc}>
-		<meta property="og:image" content="/images/sharing-image.jpg">
-		<meta property="og:url" content="{Astro.request.url.href}">
+		<meta property="og:image" content="https://paralympicsgb.brandguide.live/images/sharing-image.jpg">
+		<meta property="og:url" content={`https://paralympicsgb.brandguide.live${Astro.request.url}`}>
 		<title>{title}</title>
 	</head>
 	<body class="h-full">
