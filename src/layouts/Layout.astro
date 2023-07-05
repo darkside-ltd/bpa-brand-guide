@@ -1,5 +1,11 @@
 ---
 const { title, metaDesc } = Astro.props;
+import { URL } from 'url';
+// parse the URL
+const url = new URL(Astro.request.url);
+
+// get the pathname
+const pathname = url.pathname;
 ---
 
 <!DOCTYPE html>
@@ -19,7 +25,7 @@ const { title, metaDesc } = Astro.props;
 		<meta property="og:title" content={title}>
 		<meta property="og:description" content={metaDesc}>
 		<meta property="og:image" content="https://paralympicsgb.brandguide.live/images/sharing-image.jpg">
-		<meta property="og:url" content={`https://paralympicsgb.brandguide.live${Astro.request.url}`}>
+		<meta property="og:url" content={`https://paralympicsgb.brandguide.live${pathname}`}>
 		<title>{title}</title>
 	</head>
 	<body class="h-full">
