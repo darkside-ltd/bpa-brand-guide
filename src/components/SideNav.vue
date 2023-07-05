@@ -25,25 +25,6 @@ import {
 } from '@heroicons/vue/24/outline'
 import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/vue/20/solid'
 import navigation from '../navigation.json';
-
-
-
-// const navigation = [
-//   { name: 'Home', href: '/', icon: null, current: false },
-//   { name: 'Brand', href: '/brand', icon: null, current: false },
-//   { name: 'Accessibility', href: '/accessibility', icon: null, current: false },
-//   { name: 'Logo', href: '/logo', icon: null, current: false },
-//   { name: 'BPA Logo', href: '/logo-bpa', icon: null, current: false },
-//   { name: 'Partner Logos', href: '/partner-logos', icon: null, current: false },
-//   { name: 'Typography', href: '/typography', icon: null, current: false },
-//   { name: 'Colour', href: '/colour', icon: null, current: false },
-//   { name: 'Graphics', href: '/graphics', icon: null, current: false },
-//   { name: 'Photography', href: '/photography', icon: null, current: false },
-//   { name: 'Social', href: '/social', icon: null, current: false },
-//   { name: 'Application', href: '/application', icon: null, current: false },
-// ]
-
-
 import logoAsset from '../assets/logo/ParalympicsGB-Colour.svg';
 import logoHorizontal from '../assets/logo/ParalympicsGB-Colour-h.svg';
 
@@ -74,8 +55,8 @@ const sidebarOpen = ref(false)
               </TransitionChild>
               <!-- Sidebar component, swap this element with another sidebar if you like -->
               <div class="flex grow flex-col gap-y-5 overflow-y-auto bg-5 px-6 pb-4">
-                <div class="flex flex-col py-16 shrink-0 items-start justify-center">
-                 <!-- <a href="/"><img class="h-24 w-auto" :src="logo.src" alt="ParalympicsGB" /></a> -->
+                <div class="flex flex-col py-8 shrink-0 items-start justify-center">
+                 <a href="/"><img class="h-32 w-auto" :src="logo.src" alt="ParalympicsGB" /></a>
                 </div>
                 
                 <nav class="flex flex-1 flex-col">
