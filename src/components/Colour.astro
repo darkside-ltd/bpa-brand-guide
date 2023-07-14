@@ -1,7 +1,7 @@
 ---
 import pant from 'nearest-pantone';
 
-const { name, hex, pantone } = Astro.props;
+const { name, hex, pantone, textColour } = Astro.props;
 
 if(!hex) return
 
@@ -30,7 +30,8 @@ rgb = rgb.replace(')','')
 ---
 
 <div class="colour">
-    <div class="block-colour" style={`color: ${data.contrast.value}; background-color:${data.hex.value}`}>
+<div class="block-colour" style={`color: ${textColour || data.contrast.value}; background-color:${data.hex.value}`}>
+
         <span class="name">{name}</span><br>
 
         <div class="colour-values">
