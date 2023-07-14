@@ -13,7 +13,7 @@ async function generateNavigation() {
     const filenames = await fs.readdir(dataDirectory);
 
     // Map over the filenames and create the navigation items
-    const navigation = await Promise.all(
+    let navigation = await Promise.all(
         filenames.map(async filename => {
             // Read the Markdown file and parse the frontmatter
             const fileContent = await fs.readFile(path.join(dataDirectory, filename), 'utf8');
@@ -33,9 +33,11 @@ async function generateNavigation() {
         })
     );
 
+    // Remove the last item from the navigation array
+    navigation.pop();
+
     // Write the navigation items to a JSON file
     await fs.writeFile(path.join(__dirname, 'src', 'navigation.json'), JSON.stringify(navigation, null, 2));
-
 }
 
 generateNavigation().catch(console.error);

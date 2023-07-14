@@ -64,11 +64,5 @@
     "href": "/sub-brands",
     "icon": null,
     "current": false
-  },
-  {
-    "name": "Information",
-    "href": "/information",
-    "icon": null,
-    "current": false
   }
 ]
