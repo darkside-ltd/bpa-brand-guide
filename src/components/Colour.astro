@@ -1,7 +1,7 @@
 ---
 import pant from 'nearest-pantone';
 
-const { name, hex, pantone, textColour } = Astro.props;
+const { name, hex, pantone, cmyk, textColour } = Astro.props;
 
 if(!hex) return
 
@@ -17,10 +17,11 @@ const pantoneColor = await getPantone(data?.hex?.value)
 let pantoneValue  = pantoneColor?.pantone
 if(pantone) pantoneValue = pantone
 
-let cmyk = data.cmyk.value
-cmyk = cmyk.replace('cmyk','')
-cmyk = cmyk.replace('(','')
-cmyk = cmyk.replace(')','')
+let cmykValue = data.cmyk.value
+cmykValue = cmykValue.replace('cmyk','')
+cmykValue = cmykValue.replace('(','')
+cmykValue = cmykValue.replace(')','')
+if(cmyk) cmykValue = cmyk
 
 let rgb = data.rgb.value
 rgb = rgb.replace('rgb','')
@@ -37,7 +38,7 @@ rgb = rgb.replace(')','')
         <div class="colour-values">
             <div class="label">HEX</div><div class="value">{data.hex.value}</div>
             <div class="label">RGB</div><div class="value">{rgb}</div>
-            <div class="label">CMYK</div><div class="value">{cmyk}</div>
+            <div class="label">CMYK</div><div class="value">{cmykValue}</div>
             {pantoneValue && ( <div class="label">Pantone</div><div class="value">{pantoneValue}</div> )}
         </div>
     </div>
